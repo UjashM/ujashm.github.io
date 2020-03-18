@@ -153,13 +153,14 @@ Primary use:    Common.css file used for styling header, footer and
 
 #landing-page-text-wrapper>h1
 {
-    color: #eeb211; 
+    color:  white;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 #landing-page-text-wrapper>p
 {
-    color: white;
+    color: #eeb211;
 }
 
 .list-lower-alpha {
@@ -295,7 +296,7 @@ Primary use:    Common.css file used for styling header, footer and
     }
     #landing-page-text-wrapper
     {
-        top: 25%;
+        top: 22%;
         width: 35%;
     }
     #landing-page-text-wrapper>h1
@@ -336,12 +337,12 @@ Primary use:    Common.css file used for styling header, footer and
     }
     #landing-page-text-wrapper
     {
-        top: 30%;
+        top: 25%;
         width: 36%;
     }
     #landing-page-text-wrapper>h1
     {
-        font-size: 4vw;
+        font-size: 4.2vw;
     }
     #landing-page-text-wrapper>p
     {
@@ -357,12 +358,12 @@ Primary use:    Common.css file used for styling header, footer and
     }
     #landing-page-text-wrapper
     {
-        top: 38%;
+        top: 33%;
         width: 41%;
     }
     #landing-page-text-wrapper>h1
     {
-        font-size: 4vw;
+        font-size: 4.3vw;
     }
     #landing-page-text-wrapper>p
     {
