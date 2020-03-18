@@ -337,7 +337,7 @@ Primary use:    Common.css file used for styling header, footer and
     }
     #landing-page-text-wrapper
     {
-        top: 25%;
+        top: 42%;
         width: 36%;
     }
     #landing-page-text-wrapper>h1
@@ -358,7 +358,7 @@ Primary use:    Common.css file used for styling header, footer and
     }
     #landing-page-text-wrapper
     {
-        top: 33%;
+        top: 41%;
         width: 41%;
     }
     #landing-page-text-wrapper>h1
@@ -370,6 +370,23 @@ Primary use:    Common.css file used for styling header, footer and
         font-size: 3vw;
     }
 }
+
+@media only screen and (min-width: 1300px) {
+    #landing-page-text-wrapper
+    {
+        top: 45%;
+        width: 41%;
+    }
+    #landing-page-text-wrapper>h1
+    {
+        font-size: 4.3vw;
+    }
+    #landing-page-text-wrapper>p
+    {
+        font-size: 3vw;
+    }
+}
+
 
 .main-content{
     padding: 0px 10px;
