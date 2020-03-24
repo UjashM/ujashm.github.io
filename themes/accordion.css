@@ -2,6 +2,12 @@
 Primary use:    Accordion.css file used for styling content
                 inside Academic programs page
 -------------------------------------------------------------------*/
+.accordion-header > .paragraph-question{
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #46166C;
+    padding: 8px 20px;
+}
 
 .accordion-header{
     background-color: #DDD;
