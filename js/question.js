@@ -15,12 +15,21 @@ if(false || !!document.documentMode)
 
         else
         {   
+            let question_order = ['Sponsored Programs Administration \r\n(Pre and Post Award)',
+            'RF-Human Resources', 
+            'Regulatory and Research Compliance - Human Subjects Studies (IRB)',
+            'Regulatory and Research Compliance - Animals use in Research and Teaching (IACUC and LAR)',
+            'Grants & Faculty Development',
+            'Innovation and Commercialization',       
+            'Business Development '];
             let content = '';
             //Department-counter for unique id generation
             let questionCounter = 1;
             //finding list of distinct departments
             let distinctQuestionTypes = getDistinctAttributes(questions, "questionType");
-
+            console.log(distinctQuestionTypes);
+            distinctQuestionTypes = customSort(question_order, distinctQuestionTypes);
+            console.log(distinctQuestionTypes);
             //Iterating over list of departments
             distinctQuestionTypes.forEach(function(questionType){
 

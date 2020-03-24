@@ -10,6 +10,12 @@ let getDistinctAttributes = function(objects, attribute){
     return distinctAttributes;
 }
 
+let customSort = function(sortOrder, objects){
+       return objects.sort(function(a,b){
+            sortOrder.indexOf(a) < sortOrder.indexOf(b) ? 1 : -1;
+        })
+}
+
 let generateSubAccordionContent = function(attributes, filterAttribute, objects, generateObjectContent){
     let accordionContent = '';
 
