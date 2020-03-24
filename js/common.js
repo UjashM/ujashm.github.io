@@ -11,9 +11,20 @@ let getDistinctAttributes = function(objects, attribute){
 }
 
 let customSort = function(sortOrder, objects){
-       return objects.sort(function(a,b){
-            sortOrder.indexOf(a) < sortOrder.indexOf(b) ? 1 : -1;
-        })
+        let i,j = 0;
+        for(i = 0; i< objects.length; i++)
+        {
+            for(j = 0; j < objects.length - (i+1); j++)
+            {
+                if(sortOrder.indexOf(objects[j]) > sortOrder.indexOf(objects[j+1]))
+                {
+                    let swap = objects[j];
+                    objects[j] = objects[j+1];
+                    objects[j+1] = swap;
+                }
+            }
+        }
+        return objects;
 }
 
 let generateSubAccordionContent = function(attributes, filterAttribute, objects, generateObjectContent){
