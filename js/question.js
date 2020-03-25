@@ -32,10 +32,11 @@ if(false || !!document.documentMode)
             console.log(distinctQuestionTypes);
             //Iterating over list of departments
             distinctQuestionTypes.forEach(function(questionType){
-
                 let categoryQuestions = questions.filter(function(question){ 	
                     return question.questionType == questionType;
                 });
+                questionType = (questionType == 'Regulatory and Research Compliance - Animals use in Research and Teaching (IACUC and LAR)')? 
+                'Animals use in Research and Teaching (IACUC and LAR)': questionType;
                 //getting list of distint degrees within department
                 let uniqueQuestions = getDistinctAttributes(categoryQuestions, "question");
                 let accordionContent = generateSubAccordionContent(uniqueQuestions, "question", categoryQuestions, generateQuestionContent);
