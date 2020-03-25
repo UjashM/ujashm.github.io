@@ -18,15 +18,16 @@ Primary use:    covid-home.css used to style home-page for COVID-19
 }
 
 .image-container{
-    height: 200px;
-    display: flex;
+    float: left;
+    margin-bottom: 10px;
 }
 
 .image-container > img{
-    object-fit: contain;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: -10px;
 }
 
-.image-container + ul > li{
-    margin-left: 20px;
+.padded-list{
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
