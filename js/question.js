@@ -54,6 +54,6 @@ if(false || !!document.documentMode)
     }
 
     let generateQuestionContent = function(question){
-        let questionContent =  '<div class = "FAQ-container"><p class = "answer">'+  question.answer + '</p></div>'; 
+        let questionContent =  '<div class = "FAQ-container search-container"><p style = "display: none;">'+ question.question+'</p><p class = "answer">'+  question.answer + '</p></div>'; 
         return questionContent;
     }
