@@ -27,6 +27,6 @@ Primary use:    covid-home.css used to style home-page for COVID-19
     margin-left: 20px;
 }
 
-.image-container ~ li{
+.image-container ~ ul>li{
     margin-left: 20px;
 }
