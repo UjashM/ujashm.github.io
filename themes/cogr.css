@@ -1,0 +1,10 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Primary use:    cogr.css used to style council-on-government-relations
+-------------------------------------------------------------------*/
+
+#cogr-logo{
+    width: 200px;
+    margin-bottom: 10px;
+}

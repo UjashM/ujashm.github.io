@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Primary use:    covid-home.css used to style home-page for COVID-19
+                Research Guidance
+-------------------------------------------------------------------*/
+
+#ualbany-only-logo{
+    width: 125px;
+}
+
+#suny-logo{
+    width: 150px;
+}
+
+#suny-rf-logo{
+    width: 200px;
+}
+
+.image-container{
+    height: 200px;
+    display: flex;
+}
+
+.image-container > img{
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.image-container ~ li{
+    margin-left: 20px;
+}
