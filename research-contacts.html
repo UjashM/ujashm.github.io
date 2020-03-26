@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="https://www.albany.edu/sites/default/files/favicon_0.ico"
         type="image/vnd.microsoft.icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="themes/covid_common.css" />
     <link rel="stylesheet" href="themes/side-navigation.css" />
     <link rel="stylesheet" href="themes/custom-fonts.css" />
@@ -14,10 +13,11 @@
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href = "themes/accordion.css"/>
-    <link rel="stylesheet" href = "themes/FAQ.css"/>
+    <script src= "libraries/jquery/jquery-3.3.1.slim.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" async></script>
+    <script src="libraries/bootstrap/js/bootstrap.min.js" async></script>
     <title>
-        Frequently Asked Questions | University at Albany
+        Research Contacts | University at Albany
     </title>
 </head>
 
@@ -44,29 +44,24 @@
         <div class="display-flex">
             <div class="col-sm-12 col-md-5 col-lg-4 col-xl-3">
                 <ul id="navigation-bar">
-                    <li class="navigation-items hover-highlight"><a href="covid-19.html">GUIDANCE TO RESEARCH COMMUNITY</a></li>
-                    <li class="navigation-items hover-highlight" ><a href="UAlbany-suny.html">UALBANY, SUNY &amp; RF-SUNY</a></li>
-                    <li class="navigation-items hover-highlight"><a href="Federal-agencies.html">FEDERAL AGENCIES &amp; SPONSORS</a></li>
+                    <li class="navigation-items hover-highlight"><a href="covid-19-for-researchers.html">COVID-19 FOR RESEARCHERS</a></li>
+                    <li class="navigation-items hover-highlight" ><a href="UAlbany-suny.html">UALBANY &amp; SUNY</a></li>
+                    <li class="navigation-items hover-highlight"><a href="research-lab-tools.html">RESEARCH LAB TOOLS &amp; RESOURCES</a></li>
+                    <li class="navigation-items hover-highlight" ><a href="Federal-agencies.html">FEDERAL AGENCIES &amp; SPONSORS</a></li>
+                    <li class="navigation-items hover-highlight" id = "active-page"><a href="research-contacts.html">RESEARCH CONTACTS</a></li>
                     <li class="navigation-items hover-highlight"><a href="council-on-government-relations.html">COUNCIL ON GOVERNMENTAL RELATIONS</a></li>
-                    <li class="navigation-items hover-highlight" id = "active-page"><a href="FAQ.html">FREQUENTLY ANSWERED QUESTIONS</a></li>
-                    <li class="navigation-items hover-highlight" ><a href="research-lab-tools.html">RESEARCH RESOURCES &amp; CONTACTS</a></li>  
+                
                 </ul>
             </div>
-            <div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
-                <div class = "main-content">
+            <div class="main-content col-sm-12 col-md-7 col-lg-8 col-xl-9">
                 <h1 class="content-header">
-                    Frequently Asked Questions 
+                    RESEARCH CONTACTS
                 </h1>
-                <input id = "search-box" placeholder = "Search for FAQ"><button id = "search-button" type = "submit"><i class="fa fa-search"></i></button>
-                <br><span id = "search-box-results">
-                    </span>
-                </div>
-                <div class = "form-container">
-                <h3 class = "content-header">
-                    Submit your Questions
-                </h3>
-                <iframe width="75%" height= "800px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=lCHStdUxP0eeHYBP3L2IrM-85i33JtxGk456IR6eKWNUMFNPUE82OE9JWFJKSUJJQzkwWkVERDhJQS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-                </div>
+                <ul>
+                    <li><a href = "https://www.albany.edu/sites/default/files/2020-03/Points-of-Contacts-for-Research-Guidance.pdf">Points of Contacts for  Research Information &amp; Guidance</a></li>
+                    <li><a href = "https://www.albany.edu/sites/default/files/2020-03/Pre-and-Post-Award-Guidance-3.20.2020_1.pdf">Guidance on Proposal Submission, Contracts and Post-Award Services</a></li>
+                    </ul>
+                
             </div>
         </div>
         </div>
@@ -136,13 +131,6 @@
             <p>© 2019&nbsp;University at Albany</p>
         </section>
     </footer>
-    <script src= "libraries/jquery/jquery-3.3.1.slim.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
-    <script src = "js/accordion.js"></script>
-    <script src = "js/common.js"></script>
-    <script src = "js/question.js"></script>
-    <script src = "js/search-box.js"></script>
 </body>
 
 </html>
