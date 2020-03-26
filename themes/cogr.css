@@ -7,6 +7,6 @@ Primary use:    cogr.css used to style council-on-government-relations
 #cogr-logo{
     width: 200px;
     margin-bottom: 10px;
-    float: right;
-    margin-top: -20px;
+    float: left;
+    margin-left: 10px;
 }
