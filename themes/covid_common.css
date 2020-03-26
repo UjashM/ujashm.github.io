@@ -356,7 +356,7 @@ Primary use:    Common.css file used for styling header, footer and
 @media only screen and (min-width: 992px) {
 
     .main-content> #search-box{       
-        width: 510px;
+        width: 485px;
     }
     
     .landing-page-image-wrapper {
