@@ -1,0 +1,21 @@
+.funding-logo{
+    width: 150px;  
+    margin-left: 20px;  
+    margin-bottom: 10px;
+}
+
+#office-funding-logo{
+    width: 135px;
+    margin-left: 20px;
+}
+
+.image-container{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+    
+.image-container{
+    padding-left: 0px;
+}
+}
