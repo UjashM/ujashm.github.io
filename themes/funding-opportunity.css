@@ -47,3 +47,12 @@ Primary use:    funding-opportunity.css file used for styling funding
     display: block;
     margin-top: 10px;
 }
+
+.image-container > img{
+    width: 180px;
+}
+
+.image-container{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
