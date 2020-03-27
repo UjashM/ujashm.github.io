@@ -5,7 +5,8 @@ Primary use:    funding-opportunity.css file used for styling funding
                 opportunities page
 -------------------------------------------------------------------*/
 .agency-logo{
-    width: 100px;
+    width: 140px;
+    margin-left: -10px;
     margin-bottom: 10px;
     margin-right: 5%;
 }
@@ -43,5 +44,6 @@ Primary use:    funding-opportunity.css file used for styling funding
 }
 
 .opp-description{
-    display: none;
+    display: block;
+    margin-top: 10px;
 }
