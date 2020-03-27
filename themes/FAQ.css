@@ -13,7 +13,6 @@ Primary use:    FAQ.css used to style FAQ page
 .form-container{
     margin-top: 20px;
     margin-left: 50px;
-    height: 350px;
 }
 
 @media screen and (max-width: 768px){
