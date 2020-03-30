@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="shortcut icon" href="https://www.albany.edu/sites/default/files/favicon_0.ico"
         type="image/vnd.microsoft.icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="themes/covid_common.css" />
     <link rel="stylesheet" href="themes/side-navigation.css" />
     <link rel="stylesheet" href="themes/custom-fonts.css" />
@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href = "themes/accordion.css"/>
-    <link rel="stylesheet" href = "themes/FAQ.css"/>
+    <link rel="stylesheet" href="themes/funding-opportunity.css" />
     <title>
-        Frequently Asked Questions | University at Albany
+        Federal Sponsors &amp; Others | University at Albany
     </title>
 </head>
 
@@ -35,7 +34,7 @@
         <img class = "covid-logo" src = "assets/logos/covid-19-logo.png">
         <div id = "landing-page-text-wrapper">
             <p>RESEARCH GUIDANCE</p>
-            <h1>COVID-19</h1>           
+            <h1>COVID-19</h1>            
         </div>
     </div>
     <section class="content-wrapper">
@@ -48,28 +47,55 @@
                     <li class="navigation-items hover-highlight" ><a href="UAlbany-suny.html">UALBANY, SUNY &amp; RF-SUNY</a></li>
                     <li class="navigation-items hover-highlight"><a href="Federal-agencies.html">FEDERAL AGENCIES &amp; SPONSORS</a></li>
                     <li class="navigation-items hover-highlight"><a href="council-on-government-relations.html">COUNCIL ON GOVERNMENTAL RELATIONS</a></li>
-                    <li class="navigation-items hover-highlight"><a href="federal-sponsors.html">FUNDING OPPORTUNITIES</a></li>
-                    <li class="navigation-items hover-highlight" id = "active-page"><a href="FAQ.html">FREQUENTLY ASKED QUESTIONS</a></li>
-                    <li class="navigation-items hover-highlight" ><a href="research-lab-tools.html">RESEARCH RESOURCES &amp; CONTACTS</a></li>  
+                    <li id="expanded-navigation-item"><a href="federal-sponsors.html">FUNDING OPPORTUNITIES</a>
+                    <ul id = "sub-navigation-bar">
+                        <li class="first-sub-navigation-item" id = "active-page"><a
+                            href="federal-sponsors.html">Federal Sponsors &amp; Others</a></li>
+                        <li class="last-sub-navigation-item hover-highlight"><a
+                                href="suny-seed-funding.html">SUNY Seed Funding</a></li>
+                    </ul>
+                    </li>
+                    <li class="navigation-items hover-highlight"><a href="FAQ.html">FREQUENTLY ASKED QUESTIONS</a></li>
+                    <li class="navigation-items hover-highlight" ><a href="research-lab-tools.html">RESEARCH RESOURCES &amp; CONTACTS</a></li>              
                 </ul>
             </div>
-            <div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
-                <div class = "main-content">
+            <div class="main-content col-sm-12 col-md-7 col-lg-8 col-xl-9">
                 <h1 class="content-header">
-                    Frequently Asked Questions 
+                   COVID-19 FUNDING OPPORTUNITIES
                 </h1>
-                <input id = "search-box" placeholder = "Search for FAQ"><button id = "search-button" type = "submit"><i class="fa fa-search"></i></button>
+                <h3 class = "content-header-no-margin">
+                    NIH &amp; NSF Opportunities
+                </h3>
+                <div class="display-flex">
+                    <div class = "grants-logo-container">
+                    <div class = "image-container">
+                        <img src = "assets/logos/NSF-logo.png">
+                    </div>
+                    <a href = "https://www.nsf.gov/news/special_reports/coronavirus/"><p class = "purple-font"><b>Click to view</b></p></a>
+                    </div>
+                    <div class = "grants-logo-container">
+                    <div class = "image-container">
+                        <img src = "assets/logos/NIH-logo.png">
+                    </div>
+                    <a href = "https://grants.nih.gov/grants/natural_disasters/corona-virus.htm"><p class = "purple-font"><b>Click to view</b></p></a>
+                    </div>
+                    <div class = "grants-logo-container">
+                
+                    <div class = "image-container">
+                        <img   src = "assets/logos/grants.png">
+                    </div>
+                    <a href = "https://www.grants.gov/web/grants/search-grants.html?keywords=Coronavirus"><p class = "purple-font"><b>Click to view</b></p></a>
+                    </div>
+                </div>
+                
+             
+        <h3 class = "content-header">
+            SPECIFIC FUNDING OPPORTUNITIES (ALL SPONSORS) ​
+        </h3>
+        <input id = "search-box" placeholder = "Search for funding opportunities"><button id = "search-button" type = "submit"><i class="fa fa-search"></i></button>
                 <br><span id = "search-box-results">
                     </span>
-                </div>
-                <div class = "form-container">
-                <h3 class = "content-header">
-                    Submit your Questions
-                </h3>
-                <iframe width="75%" height= "800px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=lCHStdUxP0eeHYBP3L2IrM-85i33JtxGk456IR6eKWNUMFNPUE82OE9JWFJKSUJJQzkwWkVERDhJQS4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-                </div>
             </div>
-        </div>
         </div>
     </section>
     <footer id="footer">
@@ -140,9 +166,7 @@
     <script src= "libraries/jquery/jquery-3.3.1.slim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
-    <script src = "js/accordion.js"></script>
-    <script src = "js/common.js"></script>
-    <script src = "js/question.js"></script>
+    <script src = "js/opportunity.js"></script>
     <script src = "js/search-box.js"></script>
 </body>
 

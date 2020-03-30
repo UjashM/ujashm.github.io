@@ -49,11 +49,24 @@ Primary use:    funding-opportunity.css file used for styling funding
 }
 
 .image-container > img{
-    height: 180px;
+    width: 180px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
 }
 
 .image-container{
+    height: 185px;
+    width: 190px;
+    position: relative;
+}
+
+.grants-logo-container{
+    display: block;
     margin-right: 20px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: center;   
 }

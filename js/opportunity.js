@@ -24,7 +24,7 @@ request.onload = function(){
                             '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + opportunity[i].fundingLevel +
                             '<br>' +
                         '</div><div class = "col-sm-12 col-md-12 col-lg-6 col-xl-6">' +
-                            '<i class="fas fa-calendar-day"></i> <strong>Posted Date: </strong>' + opportunity[i].dueDate +
+                            '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + opportunity[i].dueDate +
                             '<br></div></div></div>' +
                    '<p class = "opp-description">' + opportunity[i].description + '</p>' +
                    '<button type = "button" class = "details-button" onclick = "location.href = \'' + opportunity[i].website + '\'">View Details</button></div>';
