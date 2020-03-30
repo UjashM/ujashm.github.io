@@ -18,12 +18,12 @@ request.onload = function(){
         content = content + '<div class = "display-flex opportunity-container search-container">'+ imageElement + 
                    '<div class = "col-xl-10 col-lg-9">'+ '<h4 class = "opp-header black-content-header-no-margin">'+ opportunity[i].title +'</h4>'+'<div class = "opp-details display-flex">'+
                    
-                        '<div class = "col-sm-12 col-md-12 col-lg-6 col-xl-6">'+
+                        '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">'+
                             '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + opportunity[i].agency +
                             '<br>' +
                             '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + opportunity[i].fundingLevel +
                             '<br>' +
-                        '</div><div class = "col-sm-12 col-md-12 col-lg-6 col-xl-6">' +
+                        '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
                             '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + opportunity[i].dueDate +
                             '<br></div></div></div>' +
                    '<p class = "opp-description">' + opportunity[i].description + '</p>' +
