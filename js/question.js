@@ -5,16 +5,9 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function(){
-const questions = request.response;  
-//console.log(courses);
-    
-if(false || !!document.documentMode)
-{
-       
-}
+const question = request.response;  
+let questions =  ((false || !!document.documentMode))? JSON.parse(question): question;
 
-        else
-        {   
             let question_order = ['Sponsored Programs Administration \r\n(Pre and Post Award)',
             'RF-Human Resources', 
             'Regulatory and Research Compliance - Human Subjects Studies (IRB)',
@@ -27,9 +20,7 @@ if(false || !!document.documentMode)
             let questionCounter = 1;
             //finding list of distinct departments
             let distinctQuestionTypes = getDistinctAttributes(questions, "questionType");
-            console.log(distinctQuestionTypes);
             distinctQuestionTypes = customSort(question_order, distinctQuestionTypes);
-            console.log(distinctQuestionTypes);
             //Iterating over list of departments
             distinctQuestionTypes.forEach(function(questionType){
                 let categoryQuestions = questions.filter(function(question){ 	
@@ -50,7 +41,6 @@ if(false || !!document.documentMode)
             });
             //Appending content to DOM
             appendMainContent(maincontentContainer, content);
-        }
     }
 
     let generateQuestionContent = function(question){

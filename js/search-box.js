@@ -11,16 +11,19 @@ let accordionContent = document.getElementsByClassName('accordion-content');
 searchfunction = function()
 {   
     //Setting display to none for all accordion and sub-accordionElems
-    if(cardElems.length >0)
+    if(cardElems.length > 0)
+    {
+        for(let i = 0; i< cardElems.length; i++)
+        {
+            cardElems[i].style.display = "none";
+        }
+    }
+
+    if(accordionContent.length > 0)
     {
         for(let i = 0; i< accordionContainers.length; i++)
         {
             accordionContainers[i].style.display = "none";
-        }
-    
-        for(let i = 0; i< cardElems.length; i++)
-        {
-            cardElems[i].style.display = "none";
         }
     }
 
@@ -43,7 +46,7 @@ searchfunction = function()
                 searchElems[i].style.display = "block";
                 //logic for search-box when accordion/sub-accordions are present to group content
                 //Toggles visibility if the content within accordion/subaccordion contains substring
-                if(cardElems.length >0)
+                if(cardElems.length >0 && accordionContent.length > 0)
                 {
                     searchElems[i].parentElement.style.display = "block";
                     // Accessing accordion-container class containeing content of sub-accordion
@@ -52,6 +55,12 @@ searchfunction = function()
                     //Adding class show if main-accordion is in collapsed mode
                     subaccordionElem.parentElement.parentElement.classList.add('show');
                     subaccordionElem.parentElement.parentElement.parentElement.style.display = "block";
+                }
+                else if(cardElems.length > 0)
+                {
+                    searchElems[i].parentElement.style.display = "block";
+                    searchElems[i].parentElement.parentElement.classList.add('show');
+                    searchElems[i].parentElement.parentElement.parentElement.style.display = "block";
                 }
                 matchcount = matchcount + 1;
                 //Updating search results
@@ -67,7 +76,7 @@ searchfunction = function()
     else{
             document.getElementById('search-box-results').innerText = '';
             //When user clears search, toggling state of each subAccordionElems
-            if(cardElems.length > 0)
+            if(cardElems.length > 0 && accordionContainers.length > 0)
             {
                 for(let i = 0; i< accordionContainers.length; i++)
                 {
@@ -83,6 +92,17 @@ searchfunction = function()
                 for(let i = 0; i< accordionContent.length; i++)
                 {
                     accordionContent[i].style.display = "none";
+                }
+            }
+            else if(cardElems.length > 0)
+            {
+                for(let i = 0; i< cardElems.length; i++)
+                {
+                    cardElems[i].style.display = "block";
+                }
+                for(let i = 0; i< searchElems.length; i++)
+                {
+                    searchElems[i].parentElement.parentElement.classList.remove('show');
                 }
             }
              //When user clears search, toggling state of each individual content

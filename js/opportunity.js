@@ -9,28 +9,44 @@ request.onload = function(){
     const opportunities = request.response;  
     //condition for checking if browser is Internet Explorer
     let opportunity =  ((false || !!document.documentMode))? JSON.parse(opportunities): opportunities;
-    
+    let distinctCategories = ['NSF', 'NIH', 'Federal - Others', 'International', 'Others'];
     let content = '';
-    //Iterating over grants array to generate grant content
-    for(let i = 0; i < opportunity.length; i++)
-    {
-        let imageElement = (opportunity[i].logo == '')? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "'+ opportunity[i].logo +'" /></div>';
-        content = content + '<div class = "display-flex opportunity-container search-container">'+ imageElement + 
-                   '<div class = "col-xl-10 col-lg-9">'+ '<h4 class = "opp-header black-content-header-no-margin">'+ opportunity[i].title +'</h4>'+'<div class = "opp-details display-flex">'+
-                   
-                        '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">'+
-                            '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + opportunity[i].agency +
-                            '<br>' +
-                            '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + opportunity[i].fundingLevel +
-                            '<br>' +
-                        '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
-                            '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + opportunity[i].dueDate +
-                            '<br></div></div></div>' +
-                   '<p class = "opp-description">' + opportunity[i].description + '</p>' +
-                   '<button type = "button" class = "details-button" onclick = "location.href = \'' + opportunity[i].website + '\'">View Details</button></div>';
-    }
+    let categoryCounter = 1;
+
+    distinctCategories.forEach(function(category){
+        let categoryOpportunities = opportunity.filter(function(opp){ 	
+            return opp.category == category;
+        });
+       
+        let accordionContent = generateOpportunityAccordionContent(categoryOpportunities);
+        let oppId = "collapse" + categoryCounter;
+        let headingId = "heading" + categoryCounter;
+        let accordionElem =  generateAccordionElem(oppId, headingId, category, accordionContent);
+        content = content + accordionElem;
+        categoryCounter++;
+    })
+    appendMainContent(maincontentContainer, content);
     //Appending grants to main content Element  
-    let contentElement = document.createElement('div');
-    contentElement.innerHTML = content.trim();
-    maincontentContainer.appendChild(contentElement);
+}
+
+let generateOpportunityAccordionContent = function(opportunities){
+    let content = '';
+    for(let i = 0; i < opportunities.length; i++)
+    {
+        let imageElement = (opportunities[i].logo == '')? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "'+ opportunities[i].logo +'" /></div>';
+        content = content + '<div class = "display-flex opportunity-container search-container">'+ imageElement + 
+               '<div class = "col-xl-10 col-lg-9">'+ '<h4 class = "opp-header black-content-header-no-margin">'+ opportunities[i].title +'</h4>'+'<div class = "opp-details display-flex">'+
+               
+                    '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">'+
+                        '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + opportunities[i].agency +
+                        '<br>' +
+                        '<i class="fas fa-dollar-sign"></i> <strong>Estimated Funding: </strong>' + opportunities[i].fundingLevel +
+                        '<br>' +
+                    '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
+                        '<i class="fas fa-calendar-day"></i> <strong>Due Date: </strong>' + opportunities[i].dueDate +
+                        '<br></div></div></div>' +
+               '<p class = "opp-description">' + opportunities[i].description + '</p>' +
+               '<button type = "button" class = "details-button" onclick = "location.href = \'' + opportunities[i].website + '\'">View Details</button></div>';
+    }
+    return content;
 }
