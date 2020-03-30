@@ -61,6 +61,7 @@ Primary use:    funding-opportunity.css file used for styling funding
 .image-container{
     height: 185px;
     width: 190px;
+    margin-bottom: 10px;
     position: relative;
 }
 
