@@ -71,3 +71,7 @@ Primary use:    funding-opportunity.css file used for styling funding
     margin-bottom: 20px;
     text-align: center;   
 }
+
+#grants-logo{
+    width: 210px;
+}
