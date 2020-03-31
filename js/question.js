@@ -15,6 +15,14 @@ let questions =  ((false || !!document.documentMode))? JSON.parse(question): que
             'Grants & Faculty Development',
             'Innovation and Commercialization',       
             'Business Development '];
+
+            let sub_question_order = 
+            ['What plans are in place to ensure that the animals housed on campus will continue to receive care?',
+            'Will there be any disruption to the Institutional Animal Care & Use Committee, and the review of protocols during the COVID-19 situation?',
+            'Can I still access the animals in my facility?',
+            'What can I do now to prepare for the possibility that the COVID-19 situation disrupts my animal experiments?',
+            'What are the best methods for us to reduce our animal breeding colonies?',
+            'How do I identify my critical/high-priority (20%) preserve animals at the cage level?'];
             let content = '';
             //Department-counter for unique id generation
             let questionCounter = 1;
@@ -30,6 +38,10 @@ let questions =  ((false || !!document.documentMode))? JSON.parse(question): que
                 'Animals use in Research and Teaching (IACUC and LAR)': questionType;
                 //getting list of distint degrees within department
                 let uniqueQuestions = getDistinctAttributes(categoryQuestions, "question");
+                if(questionType == 'Animals use in Research and Teaching (IACUC and LAR)')
+                {
+                    uniqueQuestions = customSort(sub_question_order, uniqueQuestions);
+                }
                 let accordionContent = generateSubAccordionContent(uniqueQuestions, "question", categoryQuestions, generateQuestionContent);
                 
                 //generating Id for bootstrap accordion
