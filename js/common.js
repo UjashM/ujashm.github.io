@@ -41,7 +41,7 @@ let generateSubAccordionContent = function(attributes, filterAttribute, objects,
             objectContent = objectContent + generateObjectContent(object);
         });
 
-        accordionContent += '<div class = "accordion-container"><div class = "accordion-header"><p class = "paragraph-question">'+ attribute + '</p></div><div class = "accordion-content">'+ objectContent +'</div></div>';
+        accordionContent += '<div class = "accordion-container"><div class = "accordion-header"><p class = "paragraph-question">'+ attribute + '</p></div><div class = "accordion-content"><ul class = "sub-list">'+ objectContent +'</ul></div></div>';
     });
     return accordionContent;
 }
