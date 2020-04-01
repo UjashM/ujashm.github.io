@@ -21,13 +21,39 @@ request.onload = function(){
     'Department of Justice (DOJ)',
     'Office of Management and Budget (OMB)​'];
 
+    let HHS_sponsor_order = 
+    [
+     'Health Resources and Services Administration (HRSA)',
+     'Substance Abuse and Mental Health Services Administration (SAMHSA​)',
+     'Centers for Disease Control​ (CDC)',
+     'Department of Health and Human Services (HHS)'];
+
+    let DOD_order = 
+    [
+        'Defense Advanced Research Projects Agency (DARPA​)',
+        'Air Force​',
+        'United States Army Medical Research Acquisition Activity​ (USAMRAA)',
+        'Navy\'s Research, Development and Acquisition',
+        'Department of Defense (DOD)',
+    ]
+
     distinctSponsors.forEach(function(majorSponsor){
         let sponsorGuidance = federalGuidance.filter(function(guidance){ 	
             return guidance.majorSponsor == majorSponsor;
         });
-        
+        let distinctsubSponsors = getDistinctAttributes(sponsorGuidance, "sponsor");
+
+        if(majorSponsor == 'Department of Health and Human Services (HHS)')
+        {
+            customSort(HHS_sponsor_order,distinctsubSponsors);
+        }
+        else if(majorSponsor == 'Department of Defense (DOD)')
+        {
+            customSort(DOD_order,distinctsubSponsors);
+        }
+
         let accordionContent = (sponsorGuidance[0].majorSponsor != sponsorGuidance[0].sponsor)?
-        generateSubAccordionContent(getDistinctAttributes(sponsorGuidance, "sponsor"), "sponsor", sponsorGuidance, generateGuidanceContent):
+        generateSubAccordionContent(distinctsubSponsors, "sponsor", sponsorGuidance, generateGuidanceContent):
         generateGuidanceAccordionContent(sponsorGuidance);
 
         let sponsorId = "collapse" + sponsorCounter;
