@@ -11,8 +11,15 @@ request.onload = function(){
     let federalGuidance =  ((false || !!document.documentMode))? JSON.parse(federalGuidances): federalGuidances;
     let content = '';
     let sponsorCounter = 1;
-
-    let distinctSponsors =  getDistinctAttributes(federalGuidance, "majorSponsor");
+    let distinctSponsors = [//'National Science Foundation (NSF) ',
+    'National Science Foundation (NSF) ​',
+    'National Institutes of Health (NIH)',
+    'Department of Health and Human Services (HHS)',
+    'Department of Defense (DOD)',
+    'Department of Energy (DOE)​',
+    'National Aeronautics and Space Administration (NASA)​',
+    'Department of Justice (DOJ)',
+    'Office of Management and Budget (OMB)​'];
 
     distinctSponsors.forEach(function(majorSponsor){
         let sponsorGuidance = federalGuidance.filter(function(guidance){ 	
