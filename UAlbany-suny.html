@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="themes/ualbany-suny.css" />
-    <script src= "libraries/jquery/jquery-3.3.1.slim.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" async></script>
-    <script src="libraries/bootstrap/js/bootstrap.min.js" async></script>
+    <link rel="stylesheet" href="themes/bootstrap-side-navtabs.css" />
     <title>
         Guidance From UALBANY, SUNY &amp; RF-SUNY | University at Albany
     </title>
@@ -59,77 +57,86 @@
                 <h1 class="content-header">
                     Guidance From UALBANY, SUNY &amp; RF-SUNY
                 </h1>
-                <div class = "display-flex">
-                <div class = "col-xl-12">
-                <h4 class="content-header-no-margin">
-                    UALBANY GUIDANCE
-                </h4>
-                <div class = "display-flex">
-                    <div class = "col-lg-8 col-xl-8">
-                        <ul class = "padded-list">
-                            <li><a href = "https://www.albany.edu/covid-19">University at Albany</a></li>
-                            <li><a href = "https://www.albany.edu/covid-19/news/update-pilot-telecommuting-program">UAlbany Pilot Telecommuting Program</a></li>
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19-Guidance-Information-from-federal-sponsors.pdf">COVID-19 Guidance Information from Federal Sponsors (04/02/20)</a></li>
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19%20Funding%20Opportunity%20Announcements%20%28FOA%29%20Web%20Resource.pdf">COVID-19 Funding Opportunity Announcement Web Resource (FOA) (03/31/20)</a></li>
-                            <li><a href = "https://www.albany.edu/covid-19/news/update-pilot-telecommuting-program"> Update: Pilot Telecommuting Program (03/23/20)​</li>
-                            <li><a href = "https://www.albany.edu/covid-19/news/covid-19-research-guidance-and-information">COVID-19 Research Guidance & Information (03/21/20)</li>
-                                <li><a href = "https://www.albany.edu/covid-19/news/update-pilot-telecommuting-program">Update: Temporary Alternate Work Location  (03/17/20)​</li>
-                            <li><a href = "https://www.albany.edu/covid-19/news/temporary-alternate-work-location-announcement">Temporary Alternate Work Location (03/15/20)</a></li>
-                            </ul>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="tab1" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h4 class= "content-header-no-margin">UAlbany Guidance</h4></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab2" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h4 class= "content-header-no-margin">SUNY Guidance</h4></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab3" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><h4 class= "content-header-no-margin">RF-SUNY Guidance</h4></a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="tab1">
+                        <!--h4 class="content-header-no-margin">
+                            UALBANY GUIDANCE
+                        </h4-->
+                        <div class = "display-flex">
+                            <div class = "col-lg-8 col-xl-8">
+                                <ul class = "padded-list">
+                                    <li><a href = "https://www.albany.edu/covid-19">University at Albany</a></li>
+                                    <li><a href = "https://www.albany.edu/covid-19/news/update-pilot-telecommuting-program">UAlbany Pilot Telecommuting Program</a></li>
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19-Guidance-Information-from-federal-sponsors.pdf">COVID-19 Guidance Information from Federal Sponsors (04/02/20)</a></li>
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19%20Funding%20Opportunity%20Announcements%20%28FOA%29%20Web%20Resource.pdf">COVID-19 Funding Opportunity Announcement Web Resource (FOA) (03/31/20)</a></li>
+                                    <li><a href = "https://www.albany.edu/covid-19/news/update-pilot-telecommuting-program"> Update: Pilot Telecommuting Program (03/23/20)​</li>
+                                    <li><a href = "https://www.albany.edu/covid-19/news/covid-19-research-guidance-and-information">COVID-19 Research Guidance & Information (03/21/20)</li>
+                                        <li><a href = "https://www.albany.edu/covid-19/news/update-pilot-telecommuting-program">Update: Temporary Alternate Work Location  (03/17/20)​</li>
+                                    <li><a href = "https://www.albany.edu/covid-19/news/temporary-alternate-work-location-announcement">Temporary Alternate Work Location (03/15/20)</a></li>
+                                    </ul>
+                                </div>   
+                        <div class = "col-lg-4 col-xl-4">   
+                        <div class = "image-container">
+                            <img id = "ualbany-only-logo" src = "assets/logos/ualbany-only-logo.png"/>
+                            </div>
                         </div>   
-                <div class = "col-lg-4 col-xl-4">   
-                <div class = "image-container">
-                    <img id = "ualbany-only-logo" src = "assets/logos/ualbany-only-logo.png"/>
+                    </div>            
                     </div>
-                </div>
-                
-                    </div>
-                </div>
-                <div class = "col-xl-12">
-                <h4 class="content-header-no-margin">
-                    SUNY GUIDANCE
-                </h4>
-                <div class = "display-flex">
-                <div class = "col-lg-8 col-xl-8">
-                <ul class = "padded-list">
-                    <li><a href = "https://www.suny.edu/health-alert/?utm_source=home&utm_campaign=012020">State University of New York</a></li>
-                </ul>
-                </div>
-                <div class = "col-lg-4 col-xl-4">
-                    <div class = "image-container">
-                        <img id = "suny-logo" src = "assets/logos/SUNY-logo.png"/>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="tab2">
+                        <!--h4 class="content-header-no-margin">
+                            SUNY GUIDANCE
+                        </h4-->
+                        <div class = "display-flex">
+                        <div class = "col-lg-8 col-xl-8">
+                        <ul class = "padded-list">
+                            <li><a href = "https://www.suny.edu/health-alert/?utm_source=home&utm_campaign=012020">State University of New York</a></li>
+                        </ul>
                         </div>
+                        <div class = "col-lg-4 col-xl-4">
+                            <div class = "image-container">
+                                <img id = "suny-logo" src = "assets/logos/SUNY-logo.png"/>
+                                </div>
+                            </div>
+                        </div>        
                     </div>
-                </div>
-                </div>
-                <div class = "col-xl-12">
-                <h4 class="content-header-no-margin">
-                    RF-SUNY GUIDANCE
-                </h4>
-                <div class = "display-flex">
-                    <div class = "col-lg-7 col-xl-8">
-                        <ul class = "padded-list">           
-                            <li><a href = "https://www.rfsuny.org/About-Us/COVID-19/">Research Foundation for SUNY</a></li>    
-                            <li><a href = "https://www.rfsuny.org/media/rfsuny/documents/telecommuting/RF-Telecommuting-Agreement.pdf">RF-SUNY Telecommuting Agreement</a></li>
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19-Guidance-Information-from-federal-sponsors.pdf">COVID-19 Guidance Information from Federal Sponsors (04/02/20)</a></li>
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19%20Funding%20Opportunity%20Announcements%20%28FOA%29%20Web%20Resource.pdf">COVID-19 Funding Opportunity Announcement Web Resource (FOA) (03/31/20)</a></li>
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-04/RF-SUNY%20COVID-19%20Guidance%20%26%20Telecommuting%20Agreement_0.pdf">RF-SUNY Updates & Telecommuting Agreement (04/01/20)</a></li>
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-03/covid-19-telecommuting-agreement.pdf">RF-SUNY Updates & Telecommuting Agreement (03/25/20)​</a></li> 
-                            <li><a href = "http://www.albany.edu/covid-19/news/covid-19-research-guidance-and-information">COVID-19 Research Guidance & Information (03/21/20)</a></li> 
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-03/Pre-and-Post-Award-Guidance-3.20.2020_1.pdf">Guidance on Proposal Submission, Contracts and Post-Award Services (03/20/20)</a></li> 
-                            <li><a href = "https://www.albany.edu/sites/default/files/2020-03/COVID-19-Guidance.pdf">RF-SUNY COVID-19 Guidance (03/18/20)</a></li>
-                            </ul>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="tab3">
+                        <!--h4 class="content-header-no-margin">
+                            RF-SUNY GUIDANCE
+                        </h4-->
+                        <div class = "display-flex">
+                            <div class = "col-lg-7 col-xl-8">
+                                <ul class = "padded-list">           
+                                    <li><a href = "https://www.rfsuny.org/About-Us/COVID-19/">Research Foundation for SUNY</a></li>    
+                                    <li><a href = "https://www.rfsuny.org/media/rfsuny/documents/telecommuting/RF-Telecommuting-Agreement.pdf">RF-SUNY Telecommuting Agreement</a></li>
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19-Guidance-Information-from-federal-sponsors.pdf">COVID-19 Guidance Information from Federal Sponsors (04/02/20)</a></li>
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-04/COVID-19%20Funding%20Opportunity%20Announcements%20%28FOA%29%20Web%20Resource.pdf">COVID-19 Funding Opportunity Announcement Web Resource (FOA) (03/31/20)</a></li>
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-04/RF-SUNY%20COVID-19%20Guidance%20%26%20Telecommuting%20Agreement_0.pdf">RF-SUNY Updates & Telecommuting Agreement (04/01/20)</a></li>
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-03/covid-19-telecommuting-agreement.pdf">RF-SUNY Updates & Telecommuting Agreement (03/25/20)​</a></li> 
+                                    <li><a href = "http://www.albany.edu/covid-19/news/covid-19-research-guidance-and-information">COVID-19 Research Guidance & Information (03/21/20)</a></li> 
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-03/Pre-and-Post-Award-Guidance-3.20.2020_1.pdf">Guidance on Proposal Submission, Contracts and Post-Award Services (03/20/20)</a></li> 
+                                    <li><a href = "https://www.albany.edu/sites/default/files/2020-03/COVID-19-Guidance.pdf">RF-SUNY COVID-19 Guidance (03/18/20)</a></li>
+                                    </ul>
+                            </div>
+                        <div class = "col-lg-5 col-xl-4">
+                        <div class = "image-container">
+                            <img id = "suny-rf-logo" src = "assets/logos/SUNY-RF-logo.png"/>   
+                            </div>
+                        </div>
+                        </div> 
                     </div>
-                <div class = "col-lg-5 col-xl-4">
-                <div class = "image-container">
-                    <img id = "suny-rf-logo" src = "assets/logos/SUNY-RF-logo.png"/>   
-                    </div>
-                </div>
-                </div>
-                </div>
+                  </div>
             </div>
-            </div>
-        </div>
         </div>
     </section>
     <footer id="footer">
@@ -197,6 +204,9 @@
             <p>© 2019&nbsp;University at Albany</p>
         </section>
     </footer>
+    <script src= "libraries/jquery/jquery-3.3.1.slim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
