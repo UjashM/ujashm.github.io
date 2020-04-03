@@ -23,7 +23,7 @@ Primary use:    Accordion.css file used for styling content
 }
 
 .accordion-header > .content-header-no-margin:hover{
-    padding: 8px 20px;
+    padding: 6px 20px 11px 20px;
     text-decoration: underline;
 }
 
@@ -33,7 +33,7 @@ Primary use:    Accordion.css file used for styling content
     padding-right: 10px;
 }
 
-button.btn-link, button.btn-link > .content-header-no-margin{
+button.btn-link, button.btn-link  .content-header-no-margin{
     color: white;
     background-color: #46166C;
     margin-bottom: 0px;

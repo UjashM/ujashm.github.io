@@ -53,12 +53,13 @@ request.onload = function(){
         }
 
         let accordionContent = (sponsorGuidance[0].majorSponsor != sponsorGuidance[0].sponsor)?
-        generateSubAccordionContent(distinctsubSponsors, "sponsor", sponsorGuidance, generateGuidanceContent):
+        generateGuidanceSubAccordionContent(distinctsubSponsors, "sponsor", sponsorGuidance, generateGuidanceContent):
         generateGuidanceAccordionContent(sponsorGuidance);
-
         let sponsorId = "collapse" + sponsorCounter;
         let headingId = "heading" + sponsorCounter;
-        let accordionElem =  generateAccordionElem(sponsorId, headingId, majorSponsor, accordionContent);
+        let sponsorLogo = (sponsorGuidance[0].majorlogo.includes('undefined'))? sponsorGuidance[sponsorGuidance.length-1].logo
+        : sponsorGuidance[0].majorlogo;
+        let accordionElem =  generateAccordionGuideanceElem(sponsorId, headingId, majorSponsor, accordionContent, sponsorLogo);
         content = content + accordionElem;
         sponsorCounter++;
     })
