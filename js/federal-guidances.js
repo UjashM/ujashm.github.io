@@ -71,7 +71,7 @@ let generateGuidanceAccordionContent = function(guidances){
     let content = '<div><ul class = "sub-list">';
     for(let i = 0; i < guidances.length; i++)
     {
-        content = content + '<li><a href = "'+ guidances[i].link +'">' + guidances[i].document + '</a></li>' ;
+        content = content + '<li><a href = "'+ guidances[i].link.trim() +'">' + guidances[i].document + '</a></li>' ;
     }
     content = content + '</ul></div>';
     return content;
