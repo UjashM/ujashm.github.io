@@ -36,10 +36,10 @@ request.onload = function(){
         });
         navigationContent = appendAgencytoNavigation(agencyAcronym, agencySummaryGuidance, i, navigationContent);
         mainContent = appendContentforSummaryGuidance(GuidanceProperties, agencySummaryGuidance, i, mainContent);
+
     }
     mainContent = mainContent + '</div>';
-    navigationContent = navigationContent + '</ul>'
-
+    navigationContent = navigationContent + '</ul>';
     appendMainContent(maincontentContainer, navigationContent + mainContent); 
 }
 
@@ -66,12 +66,12 @@ let appendContentforSummaryGuidance = function(GuidanceProperties, agencySummary
     if(index > 0)
     {
         divContent = '<div class="tab-pane fade" id="pills-'+ agencyId +'" role="tabpanel" aria-labelledby="pills-'+ agencyId +'-tab">' 
-        + tableContent +'</div>';
+        + generateFOA(agencySummaryGuidance) + generateLinkContent(agencySummaryGuidance) + tableContent  + generateComment(agencySummaryGuidance)+'</div>';
     }
     else
     {
         divContent = '<div class="tab-pane fade show active" id="pills-'+ agencyId +'" role="tabpanel" aria-labelledby="pills-'+ agencyId +'-tab">' 
-        + tableContent +'</div>';
+        + generateFOA(agencySummaryGuidance) + generateLinkContent(agencySummaryGuidance)+ tableContent   + generateComment(agencySummaryGuidance)+'</div>';
     }
     mainContent = mainContent + divContent;
     return mainContent;
@@ -79,7 +79,6 @@ let appendContentforSummaryGuidance = function(GuidanceProperties, agencySummary
 
 let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, tableContent)
 {
-
     tableContent = '<table><thead><tr><th>Information</th><th>Answer</th><th>Description</th></tr></thead><tbody>';
     let tbodyContent = '';
     for(let i = 0; i < GuidanceProperties.length; i++){
@@ -87,6 +86,33 @@ let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, t
         '</td><td>'+ agencySummaryGuidance[0].guidanceAnswers[i] +'</td><td>'+ agencySummaryGuidance[0].guidanceAnswerDescription[i] +'</td></tr>';
         tbodyContent = tbodyContent + rowElem;
     }
-    tableContent = tableContent + tbodyContent + '</tbody></table>';
+    tableContent = tableContent + tbodyContent + '</tbody></table>'+ '<br>';
     return tableContent;
+}
+
+let generateLinkContent = function(agencySummaryGuidance){
+    let linkContent = '<b class = "purple-font">Links</b><ul class = "sub-list">';
+    for(let i = 0; i < agencySummaryGuidance[0].guidanceLinks.length; i++)
+    {
+      if(null!= agencySummaryGuidance[0].guidanceLinks[i])
+      {
+        linkContent = linkContent + '<li><a href = "'+ agencySummaryGuidance[0].guidanceLinks[i]+'">'+
+        agencySummaryGuidance[0].guidanceDocuments[i] + '</a></li>';
+      }
+    }
+    return linkContent + '</ul>';
+}
+
+let generateComment = function(agencySummaryGuidance){
+    let CommentElement = '';
+    if(agencySummaryGuidance[0].guidanceComments.trim() != '')
+    {
+        CommentElement = '<p><b class = "purple-font">Comments</b><br>'+ agencySummaryGuidance[0].guidanceComments +'</p>';
+    }
+    return CommentElement;
+}
+
+let generateFOA = function(agencySummaryGuidance){
+    let FOAElement = '<p><b class = "purple-font">COVID-19 FOA Site</b><br>'+ agencySummaryGuidance[0].FOASiteLink +'</p>';;
+    return FOAElement;
 }
