@@ -23,6 +23,7 @@ request.onload = function(){
 
     let HHS_sponsor_order = 
     [
+    'Food and Drug Administration',
      'Health Resources and Services Administration (HRSA)',
      'Substance Abuse and Mental Health Services Administration (SAMHSA​)',
      'Centers for Disease Control​ (CDC)',
@@ -31,18 +32,24 @@ request.onload = function(){
     let DOD_order = 
     [
         'Defense Advanced Research Projects Agency (DARPA​)',
-        'Air Force​',
+        'Office of Naval Research (ONR)',
+        'Department of the Air Force',
         'United States Army Medical Research Acquisition Activity​ (USAMRAA)',
         'Navy\'s Research, Development and Acquisition',
         'Department of Defense (DOD)',
-    ]
+    ];
 
     distinctSponsors.forEach(function(majorSponsor){
         let sponsorGuidance = federalGuidance.filter(function(guidance){ 	
             return guidance.majorSponsor == majorSponsor;
         });
+        
+        let majorSponsorlogos = getDistinctAttributes(sponsorGuidance, "majorlogo");
+        majorSponsorlogos = majorSponsorlogos.filter(function(majorlogo){
+            return (!majorlogo.includes('undefined'));
+        });
+        let sponsorLogo = majorSponsorlogos[0];
         let distinctsubSponsors = getDistinctAttributes(sponsorGuidance, "sponsor");
-
         if(majorSponsor == 'Department of Health and Human Services (HHS)')
         {
             customSort(HHS_sponsor_order,distinctsubSponsors);
@@ -57,8 +64,7 @@ request.onload = function(){
         generateGuidanceAccordionContent(sponsorGuidance);
         let sponsorId = "collapse" + sponsorCounter;
         let headingId = "heading" + sponsorCounter;
-        let sponsorLogo = (sponsorGuidance[0].majorlogo.includes('undefined'))? sponsorGuidance[sponsorGuidance.length-1].logo
-        : sponsorGuidance[0].majorlogo;
+        sponsorLogo = (typeof(sponsorLogo) != 'undefined')? sponsorLogo: sponsorGuidance[0].logo;
         let accordionElem =  generateAccordionGuideanceElem(sponsorId, headingId, majorSponsor, accordionContent, sponsorLogo);
         content = content + accordionElem;
         sponsorCounter++;
