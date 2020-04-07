@@ -62,28 +62,45 @@ let appendAgencytoNavigation = function(agencyAcronym, agencySummaryGuidance, in
 let appendContentforSummaryGuidance = function(GuidanceProperties, agencySummaryGuidance, index, mainContent){
     let divContent = '';
     let agencyId = "agency" + index.toString();
+    let FOAlink = generateFOA(agencySummaryGuidance);
+    let CommentElem = generateComment(agencySummaryGuidance);
+    let linkContent = generateLinkContent(agencySummaryGuidance);
     let tableContent = generateTableContent(GuidanceProperties, agencySummaryGuidance);
+    let legendContent = generateLegendContent();
+    let content = FOAlink + linkContent + legendContent + tableContent  + CommentElem;
     if(index > 0)
     {
         divContent = '<div class="tab-pane fade" id="pills-'+ agencyId +'" role="tabpanel" aria-labelledby="pills-'+ agencyId +'-tab">' 
-        + generateFOA(agencySummaryGuidance) + generateLinkContent(agencySummaryGuidance) + tableContent  + generateComment(agencySummaryGuidance)+'</div>';
+        + content +'</div>';
     }
     else
     {
         divContent = '<div class="tab-pane fade show active" id="pills-'+ agencyId +'" role="tabpanel" aria-labelledby="pills-'+ agencyId +'-tab">' 
-        + generateFOA(agencySummaryGuidance) + generateLinkContent(agencySummaryGuidance)+ tableContent   + generateComment(agencySummaryGuidance)+'</div>';
+        + content +'</div>';
     }
     mainContent = mainContent + divContent;
     return mainContent;
 }
+
+/*let generateContentforSummaryGuidance = function(agencySummaryGuidance, GuidanceProperties)
+{
+    let FOAlink = generateFOA(agencySummaryGuidance);
+    let CommentElem = generateComment(agencySummaryGuidance);
+    let linkContent = generateLinkContent(agencySummaryGuidance);
+    let tableContent = generateTableContent(GuidanceProperties, agencySummaryGuidance);
+    let legendContent = generateLegendContent();
+    let content = FOAlink + linkContent + legendContent + tableContent  + CommentElem;
+    return content;
+}*/
 
 let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, tableContent)
 {
     tableContent = '<table><thead><tr><th>Information</th><th>Answer</th><th>Description</th></tr></thead><tbody>';
     let tbodyContent = '';
     for(let i = 0; i < GuidanceProperties.length; i++){
+        let answerSymbol = getCircleSymbols(agencySummaryGuidance[0].guidanceAnswers[i]);
         let rowElem = '<tr><td class = "first-column-cell">' + GuidanceProperties[i] + 
-        '</td><td>'+ agencySummaryGuidance[0].guidanceAnswers[i] +'</td><td>'+ agencySummaryGuidance[0].guidanceAnswerDescription[i] +'</td></tr>';
+        '</td><td class = "symbol-cell">'+ answerSymbol +'</td><td>'+ agencySummaryGuidance[0].guidanceAnswerDescription[i] +'</td></tr>';
         tbodyContent = tbodyContent + rowElem;
     }
     tableContent = tableContent + tbodyContent + '</tbody></table>'+ '<br>';
@@ -115,4 +132,28 @@ let generateComment = function(agencySummaryGuidance){
 let generateFOA = function(agencySummaryGuidance){
     let FOAElement = '<p><b class = "purple-font">COVID-19 FOA Site</b><br>'+ agencySummaryGuidance[0].FOASiteLink +'</p>';;
     return FOAElement;
+}
+
+let generateLegendContent = function(){
+    let legendContent = '<div class = "legend-content"><img src="https://img.icons8.com/emoji/25/000000/green-circle-emoji.png">'+
+    '<span class="legend-text">Yes </span><img src="https://img.icons8.com/emoji/25/000000/yellow-circle-emoji.png">'+
+    '<span class="legend-text">Case by Case </span><img src="https://img.icons8.com/emoji/25/000000/red-circle-emoji.png">'+
+    '<span class="legend-text">Not Addressed </span></div>'
+    return legendContent;
+}
+
+let getCircleSymbols = function(answer){
+    let imageContent = '';
+    switch(true){
+        case answer.includes("YES"):
+            imageContent = '<img src="https://img.icons8.com/emoji/25/000000/green-circle-emoji.png"></img>';
+            break;
+        case answer.includes("NOT"):
+            imageContent = '<img src="https://img.icons8.com/emoji/25/000000/red-circle-emoji.png"></img>';
+            break;
+        default:
+            imageContent = '<img src="https://img.icons8.com/emoji/25/000000/yellow-circle-emoji.png"></img>';
+    }
+    return imageContent;
+
 }

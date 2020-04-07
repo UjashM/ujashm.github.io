@@ -24,6 +24,10 @@ Primary use:    Used to style summary guidance page
     text-align: center;
 }
 
+table{
+    clear: both;
+}
+
 td, th {
     border: 1px solid black;
     padding: 5px;
@@ -31,4 +35,17 @@ td, th {
 
 .first-column-cell{
     width: 20%;
+}
+
+.symbol-cell{
+    text-align: center;
+}
+
+.legend-content{
+    margin-bottom: 10px;
+    float: left;
+}
+
+.legend-text{
+    vertical-align: middle;
 }
