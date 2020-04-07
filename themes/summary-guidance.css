@@ -33,6 +33,12 @@ td, th {
     padding: 5px;
 }
 
+th{
+    background-color: #46166C;
+    color: white;
+    padding: 10px;
+}
+
 .first-column-cell{
     width: 20%;
 }
