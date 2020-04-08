@@ -33,8 +33,23 @@ Primary use:    Common.css file used for styling header, footer and
 }
 
 .buffer {
-    height: 75px;
+    height: 100px;
     width: 100%;
+}
+
+.social-media-container > button{
+    color: white;
+    background-color: #46166C;
+    padding: 9px;
+    font-size: 22px;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 32px;
+}
+
+.social-media-container > button a{
+    color: inherit;
+    text-decoration: none;
 }
 
 .grey-content-header {
