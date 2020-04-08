@@ -45,6 +45,7 @@ Primary use:    Common.css file used for styling header, footer and
     font-family: 'News Cycle', Helvetica, Arial, sans-serif;
     margin-top: 20px;
     margin-left: 32px;
+    border-radius: 1%;
 }
 
 .social-media-container > button a{
