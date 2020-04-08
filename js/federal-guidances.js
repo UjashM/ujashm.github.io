@@ -17,8 +17,14 @@ request.onload = function(){
     'Department of Health and Human Services (HHS)',
     'Department of Defense (DOD)',
     'Department of Energy (DOE)​',
+    'Department of Transportation (DOT)',
+    'Department of Agriculture (USDA)',
     'National Aeronautics and Space Administration (NASA)​',
     'Department of Justice (DOJ)',
+    'Environmental Protection Agency (EPA)',
+    'Agency for International Development (USAID)',
+    'National Security Agency',
+    'National Endowment for the Humanities',
     'Office of Management and Budget (OMB)​'];
 
     let HHS_sponsor_order = 
