@@ -9,7 +9,8 @@ request.onload = function(){
     const opportunities = request.response;  
     //condition for checking if browser is Internet Explorer
     let opportunity =  ((false || !!document.documentMode))? JSON.parse(opportunities): opportunities;
-    let distinctCategories = ['NSF', 'NIH', 'Federal - All CDC','Federal - All DHHS', 'Federal - All DoD', 'Federal - All DoE', 'International', 'Others'];
+    let distinctCategories = ['NSF', 'NIH', 'Federal', 'International', 'Others'];
+    let FederalsubCategories = ['Federal - All CDC','Federal - All HHS', 'Federal - All DoD', 'Federal - All DoE'];
     let content = '';
     let categoryCounter = 1;
 
@@ -17,7 +18,7 @@ request.onload = function(){
         let categoryOpportunities = opportunity.filter(function(opp){ 	
             return opp.category == category;
         });
-       
+
         let accordionContent = generateOpportunityAccordionContent(categoryOpportunities);
         let oppId = "collapse" + categoryCounter;
         let headingId = "heading" + categoryCounter;
