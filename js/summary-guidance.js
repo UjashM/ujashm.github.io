@@ -131,7 +131,7 @@ let generateComment = function(agencySummaryGuidance){
 
 let generateFOA = function(agencySummaryGuidance){
     let FOAElement = '<h2 class = "content-header-no-margin">'+ agencySummaryGuidance[0].agency +'</h2>'
-    '<p><b class = "purple-font">COVID-19 FOA Site</b><br>'+ agencySummaryGuidance[0].FOASiteLink +'</p>';;
+    + '<p><b class = "purple-font">COVID-19 FOA Site</b><br>'+ agencySummaryGuidance[0].FOASiteLink +'</p>';
     return FOAElement;
 }
 
