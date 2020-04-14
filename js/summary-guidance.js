@@ -67,7 +67,7 @@ let appendContentforSummaryGuidance = function(GuidanceProperties, agencySummary
     let linkContent = generateLinkContent(agencySummaryGuidance);
     let tableContent = generateTableContent(GuidanceProperties, agencySummaryGuidance);
     let legendContent = generateLegendContent();
-    let content = FOAlink + linkContent + legendContent + tableContent  + CommentElem;
+    let content = FOAlink + legendContent + tableContent + linkContent + CommentElem;
     if(index > 0)
     {
         divContent = '<div class="tab-pane fade" id="pills-'+ agencyId +'" role="tabpanel" aria-labelledby="pills-'+ agencyId +'-tab">' 
@@ -108,7 +108,7 @@ let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, t
 }
 
 let generateLinkContent = function(agencySummaryGuidance){
-    let linkContent = '<b class = "purple-font">Links</b><ul class = "sub-list">';
+    let linkContent = '<b class = "purple-font">Additional Resource Links</b><ul class = "sub-list">';
     for(let i = 0; i < agencySummaryGuidance[0].guidanceLinks.length; i++)
     {
       if(null!= agencySummaryGuidance[0].guidanceLinks[i])
@@ -138,7 +138,7 @@ let generateFOA = function(agencySummaryGuidance){
 let generateLegendContent = function(){
     let legendContent = '<div class = "legend-content"><img src="https://img.icons8.com/emoji/25/000000/green-circle-emoji.png">'+
     '<span class="legend-text">Yes </span><img src="https://img.icons8.com/emoji/25/000000/yellow-circle-emoji.png">'+
-    '<span class="legend-text">Case by Case </span><img src="https://img.icons8.com/emoji/25/000000/orange-circle-emoji.png">'+
+    '<span class="legend-text">Case by Case </span><img src="https://img.icons8.com/emoji/25/000000/blue-circle-emoji.png">'+
     '<span class="legend-text">Not Addressed </span><img src="https://img.icons8.com/emoji/25/000000/red-circle-emoji.png">'+
     '<span class="legend-text">No</span></div>'
     return legendContent;
@@ -151,7 +151,7 @@ let getCircleSymbols = function(answer){
             imageContent = '<img src="https://img.icons8.com/emoji/25/000000/green-circle-emoji.png"></img>';
             break;
         case answer.includes("NOT"):
-            imageContent = '<img src="https://img.icons8.com/emoji/25/000000/orange-circle-emoji.png"></img>';
+            imageContent = '<img src="https://img.icons8.com/emoji/25/000000/blue-circle-emoji.png"></img>';
             break;
         case answer.includes("NO"):
                 imageContent = '<img src="https://img.icons8.com/emoji/25/000000/red-circle-emoji.png"></img>';
