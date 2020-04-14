@@ -19,9 +19,23 @@ request.onload = function(){
      'United States Agency for International Development (USAID)', 
      'Department of Energy (DOE), Office of Science',
      'Office of Naval Research (ONR)',
+     'US Department of Interior (DOI)',
+     'Food and Drug Administration (FDA)',
+     'Health and Human Services Administration (HRSA)',
+     'Substance Abuse and Mental Health Services Administration (SAMHSA)',
+     'Department of Justice (DOJ)',
+     'United States Department of Agriculture (USDA) National Institute of Food and Agriculture (NIFA)',
+     'U.S. Department of Transportation (DOT) Federal Transit Administration (FTA)',
+     'Environmental Protection Agency (EPA)',
+     'National Endowment for the Humanities (NEH)',
+     'National Endowment for the Arts (NEA)',
+     'Institute of Museum and Library Sciences (IMLS)',
+     'Department of Commerce (DOC)',
+     'Centers for Disease Control and Prevention (CDC)',
      'OMB M-20-17'
     ]
-    let agencyAcronym = ['NSF', 'NIH', 'NASA', 'DOD', 'AMRAA', 'AFOSR', 'DARPA', 'USAID', 'DOE', 'ONR', 'OMB'];
+    let agencyAcronym = ['NSF', 'NIH', 'NASA', 'DOD', 'AMRAA', 'AFOSR', 'DARPA', 'USAID', 'DOE', 'ONR', 'DOI',
+                        'FDA','HRSA','SAMHSA','DOJ','NIFA','FTA','EPA', 'NEH', 'NEA', 'IMLS', 'DOC', 'CDC',  'OMB'];
     let GuidanceProperties = ['Late Proposal Acceptance Guidance', 'Allowability of salaries and other project activities', 'Late SAM Registration',
 'Other Program Costs', 'Trainees', 'Non Refundable Travel Charges Allowable?', 'No Cost Extensions', 'Progress & Financial Reporting',
 'Pre Award & Other Expenses', 'Prior Approval', 'PPE Donations/Re-budgeting'];
