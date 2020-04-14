@@ -122,7 +122,9 @@ let generateTableContent = function(GuidanceProperties, agencySummaryGuidance, t
 }
 
 let generateLinkContent = function(agencySummaryGuidance){
-    let linkContent = '<b class = "purple-font">Additional Resource Links</b><ul class = "sub-list">';
+
+    let linkContent = (agencySummaryGuidance[0].guidanceLinks.length > 0)?
+    '<b class = "purple-font">Additional Resource Links</b><ul class = "sub-list">': '';
     for(let i = 0; i < agencySummaryGuidance[0].guidanceLinks.length; i++)
     {
       if(null!= agencySummaryGuidance[0].guidanceLinks[i])
@@ -131,6 +133,7 @@ let generateLinkContent = function(agencySummaryGuidance){
         agencySummaryGuidance[0].guidanceDocuments[i] + '</a></li>';
       }
     }
+    
     return linkContent + '</ul>';
 }
 
