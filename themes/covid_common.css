@@ -180,7 +180,7 @@ Primary use:    Common.css file used for styling header, footer and
     text-shadow: 3px 1px 2px black;
     left: 5%;
     padding: 10px;
-    position: absolute;
+    position: relative;
 }
 
 #landing-page-text-wrapper>h1
@@ -262,8 +262,8 @@ Primary use:    Common.css file used for styling header, footer and
 
 @media only screen and (max-width: 600px) {
     .landing-page-image-wrapper {
-        background-image: url('../assets/images/cyber-ai-background-xs.png');
-        height: 78vw;
+        background-image: url('../assets/logos/covid-19-logo-xs.png');
+        height: 82.5vw;
     }
     #landing-page-text-wrapper
     {   
@@ -298,7 +298,7 @@ Primary use:    Common.css file used for styling header, footer and
 
 @media only screen and (min-width: 600px) {
     .landing-page-image-wrapper {
-        background-image: url('../assets/images/cyber-ai-background-sm.png');
+        background-image: url('../assets/logos/covid-10-logo-sm.png');
         height: 64.7vw;
     }
     #landing-page-text-wrapper
@@ -333,8 +333,8 @@ Primary use:    Common.css file used for styling header, footer and
 
 @media only screen and (min-width: 768px) {
     .landing-page-image-wrapper {
-        background-image: url('../assets/images/cyber-ai-background-md.png');
-        height: 48.5vw;
+        background-image: url('../assets/logos/covid-19-logo-md.png');
+        height: 49.8vw;
     }
     #landing-page-text-wrapper
     {
@@ -378,8 +378,8 @@ Primary use:    Common.css file used for styling header, footer and
     }
     
     .landing-page-image-wrapper {
-        background-image: url('../assets/images/cyber-ai-background-lg.png');
-        height: 41.5vw;
+        background-image: url('../assets/logos/covid-19-logo-lg.png');
+        height: 42.5vw;
     }
     #landing-page-text-wrapper
     {
@@ -399,8 +399,8 @@ Primary use:    Common.css file used for styling header, footer and
 
 @media only screen and (min-width: 1192px) {
     .landing-page-image-wrapper {
-        background-image: url('../assets/logos/covid-19-logo.png');
-        height: 30vw;
+        background-image: url('../assets/logos/covid-19-logo-xl.png');
+        height: 30.6vw;
     }
     #landing-page-text-wrapper
     {
@@ -432,7 +432,6 @@ Primary use:    Common.css file used for styling header, footer and
         font-size: 3vw;
     }
 }
-
 
 .main-content{
     padding: 0px 10px;
