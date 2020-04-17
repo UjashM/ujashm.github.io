@@ -32,10 +32,12 @@ request.onload = function(){
      'Institute of Museum and Library Sciences (IMLS)',
      'Department of Commerce (DOC)',
      'Centers for Disease Control and Prevention (CDC)',
+     'National Oceanic and Atmospheric Administration (NOAA)',
+     'Federal Emergency Management Administration (FEMA)',
      'OMB M-20-17'
     ]
     let agencyAcronym = ['NSF', 'NIH', 'NASA', 'DOD', 'AMRAA', 'AFOSR', 'DARPA', 'USAID', 'DOE', 'ONR', 'DOI',
-                        'FDA','HRSA','SAMHSA','DOJ','NIFA','FTA','EPA', 'NEH', 'NEA', 'IMLS', 'DOC', 'CDC',  'OMB'];
+                        'FDA','HRSA','SAMHSA','DOJ','NIFA','FTA','EPA', 'NEH', 'NEA', 'IMLS', 'DOC', 'CDC',  'NOAA', 'FEMA', 'OMB'];
     let GuidanceProperties = ['Late Proposal Acceptance Guidance', 'Allowability of salaries and other project activities', 'Late SAM Registration',
 'Other Program Costs', 'Trainees', 'Non Refundable Travel Charges Allowable?', 'No Cost Extensions', 'Progress & Financial Reporting',
 'Pre Award & Other Expenses', 'Prior Approval', 'PPE Donations/Re-budgeting'];
