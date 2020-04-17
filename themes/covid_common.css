@@ -114,7 +114,7 @@ Primary use:    Common.css file used for styling header, footer and
 }
 
 .landing-page-image-wrapper {
-    background-size: contain;
+    background-size: cover;
     height: 70%;
     width: 100%;
 }
