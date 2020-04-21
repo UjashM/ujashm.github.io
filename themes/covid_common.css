@@ -113,6 +113,9 @@ Primary use:    Common.css file used for styling header, footer and
     vertical-align: middle;
 }
 
+.dark-red-font{
+    color: rgb(210,0,0);
+}
 .landing-page-image-wrapper {
     background-size: cover;
     height: 70%;
