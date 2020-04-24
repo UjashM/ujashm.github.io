@@ -66,3 +66,11 @@ button.btn-link:hover, button.btn-link > .content-header-no-margin:hover{
     color: white;
     background-color: #46166C;
 }
+
+.fa-chevron-down{
+    float: right;
+    margin-right: 10px;
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+}
