@@ -87,6 +87,7 @@ Primary use:    Common.css file used for styling header, footer and
     color: #777;
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
+    margin-bottom: 0px;
 }
 
 .content-header {
