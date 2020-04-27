@@ -83,6 +83,12 @@ Primary use:    Common.css file used for styling header, footer and
     margin-bottom: 15px;
 }
 
+.grey-content-header-no-margin {
+    color: #777;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
 .content-header {
     color: #46166C;
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
