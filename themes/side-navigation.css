@@ -25,6 +25,19 @@ Primary use:    side-navigation.css file used for styling components
     color: inherit;
 }
 
+
+#navigation-bar .fa-chevron-down{
+    float: right;
+    margin-right: 10px;
+    color: #46166B;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#navigation-bar .hover-highlight:hover .fa-chevron-down {
+    color: inherit;
+}
+
 .navigation-items {
     border-bottom: 2px solid #909090;
     color: #46166B;
