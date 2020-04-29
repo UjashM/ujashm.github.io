@@ -67,11 +67,11 @@ Primary use:    funding-opportunity.css file used for styling funding
 
 .grants-logo-container{
     display: block;
-    margin-right: 20px;
+    margin-right: 30px;
     margin-bottom: 20px;
     text-align: center;   
 }
 
 #grants-logo{
-    width: 210px;
+    width: 195px;
 }
