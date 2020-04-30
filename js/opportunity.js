@@ -18,11 +18,11 @@ request.onload = function(){
         let categoryOpportunities = opportunity.filter(function(opp){ 	
             return opp.category == category;
         });
-
+        let categoryHeader = category + ' (' + categoryOpportunities.length + ' awards)';
         let accordionContent = generateOpportunityAccordionContent(categoryOpportunities);
         let oppId = "collapse" + categoryCounter;
         let headingId = "heading" + categoryCounter;
-        let accordionElem =  generateAccordionElem(oppId, headingId, category, accordionContent);
+        let accordionElem =  generateAccordionElem(oppId, headingId, categoryHeader, accordionContent);
         content = content + accordionElem;
         categoryCounter++;
     })
