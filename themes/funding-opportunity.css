@@ -75,3 +75,7 @@ Primary use:    funding-opportunity.css file used for styling funding
 #grants-logo{
     width: 195px;
 }
+
+.card-header h3.content-header-no-margin{
+    text-transform: inherit;
+} 

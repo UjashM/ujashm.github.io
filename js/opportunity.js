@@ -18,7 +18,7 @@ request.onload = function(){
         let categoryOpportunities = opportunity.filter(function(opp){ 	
             return opp.category == category;
         });
-        let categoryHeader = category + ' (' + categoryOpportunities.length + ' awards)';
+        let categoryHeader = category + ' (' + categoryOpportunities.length + ' Solicitations)';
         let accordionContent = generateOpportunityAccordionContent(categoryOpportunities);
         let oppId = "collapse" + categoryCounter;
         let headingId = "heading" + categoryCounter;
