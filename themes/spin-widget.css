@@ -128,4 +128,9 @@ input#keywords{
 
 #prev{
     margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#next{
+    margin-bottom: 5px;
 }
