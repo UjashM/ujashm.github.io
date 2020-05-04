@@ -55,7 +55,7 @@ if(false || !!document.documentMode)
             
             //Logic for sorting and replacing Research Centers at last
             distinctSchools.sort();
-            let rindex = distinctSchools.indexOf('Research Centers');
+            let rindex = distinctSchools.indexOf('Others');
             let rlength = distinctSchools.length - 1;
             let swap = distinctSchools[rindex];
             distinctSchools[rindex] = distinctSchools[rlength];
@@ -99,7 +99,7 @@ if(false || !!document.documentMode)
                         '<a class = "no-link-decoration" href = ' + faculty.facultyLink + '>' + faculty.fullName + '</a></h2><h5 class = "content-header-no-margin faculty-title">'+ faculty.title + ',<br>'+
                         institution + '</h5><p class = "faculty-description"><strong>Email: </strong> <a class = "email-link" href = mailto:' + faculty.email + 
                         '>'+ faculty.email+ '</a><br><strong>Phone: </strong>'+ faculty.contact + '<br><strong>Research Interests: </strong>'+ faculty.researchInterest + '</p><p>' + 
-                        faculty.researchDescription +'</p></div>'; 
+                        faculty.researchDescription +'</p>'+ generateLinkContent(faculty.covidProjects) +'</div>'; 
                     });
 
                     accordioncontent += '<div class = "accordion-container"><div class = "accordion-header"><h3 class = "content-header-no-margin">'+ department + '</h3></div><div class = "accordion-content">'+ departmentFacultyContent +'</div></div>';
@@ -123,4 +123,20 @@ if(false || !!document.documentMode)
             accordionElement.innerHTML = content.trim();
             maincontentContainer.appendChild(accordionElement);
         }
+    }
+
+    let generateLinkContent = function(covidProject){
+        let linkContent = '';
+        for(let i = 0; i < covidProject.length; i++)
+        {
+          if(undefined!== covidProject[i] && '' != covidProject[i])
+          {
+            linkContent = linkContent + '<li>'+ covidProject[i] + '</li>';
+          }
+        }
+        linkContent = (covidProject.length > 0)?
+        '<b class = "purple-font">Ongoing Research/Scholarship Related to COVID-19</b><ul class = "sub-list">'
+        + linkContent: '';
+        
+        return linkContent + '</ul>';
     }
