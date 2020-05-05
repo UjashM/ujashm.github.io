@@ -91,3 +91,8 @@ let appendMainContent = function(maincontentContainer, content){
     mainContentElement.innerHTML = content.trim();
     maincontentContainer.appendChild(mainContentElement);
 }
+
+let appendPostDate  = function(date){
+    let lastupdatedContent = document.getElementById('last-updated');
+    lastupdatedContent.innerHTML = "Last updated: " + date;
+}

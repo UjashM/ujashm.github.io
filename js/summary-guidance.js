@@ -57,6 +57,7 @@ request.onload = function(){
     mainContent = mainContent + '</div>';
     navigationContent = navigationContent + '</ul>';
     appendMainContent(maincontentContainer, navigationContent + mainContent); 
+    appendPostDate(summaryGuidances[0].updateddate);
 }
 
 let appendAgencytoNavigation = function(agencyAcronym, agencySummaryGuidance, index, navigationContent){

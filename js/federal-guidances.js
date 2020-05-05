@@ -76,7 +76,8 @@ request.onload = function(){
         sponsorCounter++;
     })
     appendMainContent(maincontentContainer, content);
-    //Appending grants to main content Element  
+    //Appending grants to main content Element 
+    appendPostDate(federalGuidances[0].updateddate);
 }
 
 let generateGuidanceAccordionContent = function(guidances){
