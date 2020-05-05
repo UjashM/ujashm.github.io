@@ -28,6 +28,7 @@ request.onload = function(){
     })
     appendMainContent(maincontentContainer, content);
     //Appending grants to main content Element  
+    appendPostDate(opportunities[0].updateddate);
 }
 
 let generateOpportunityAccordionContent = function(opportunities){
