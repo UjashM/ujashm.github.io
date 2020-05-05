@@ -97,9 +97,9 @@ if(false || !!document.documentMode)
                         let institution = (faculty.facultyType == 'researcher')? faculty.department : fulldepartment;
                         departmentFacultyContent = departmentFacultyContent +  '<div class = "search-container faculty-info"><img class = "faculty-image" src = "'+ faculty.photo+'"/> <h2 class = "content-header-no-margin">' +
                         '<a class = "no-link-decoration" href = ' + faculty.facultyLink + '>' + faculty.fullName + '</a></h2><h5 class = "content-header-no-margin faculty-title">'+ faculty.title + ',<br>'+
-                        institution + '</h5><p class = "faculty-description"><strong>Email: </strong> <a class = "email-link" href = mailto:' + faculty.email + 
+                        institution + '</h5>'+ generateLogoContent(faculty) +'<p class = "faculty-description"><strong>Email: </strong> <a class = "email-link" href = mailto:' + faculty.email + 
                         '>'+ faculty.email+ '</a><br><strong>Phone: </strong>'+ faculty.contact + '<br><strong>Research Interests: </strong>'+ faculty.researchInterest + '</p><p>' + 
-                        faculty.researchDescription +'</p>'+ generateLinkContent(faculty.covidProjects) +'</div>'; 
+                        faculty.researchDescription +'</p>'+ generateCovidResearchContent(faculty.covidProjects) +'</div>'; 
                     });
 
                     accordioncontent += '<div class = "accordion-container"><div class = "accordion-header"><h3 class = "content-header-no-margin">'+ department + '</h3></div><div class = "accordion-content">'+ departmentFacultyContent +'</div></div>';
@@ -125,7 +125,7 @@ if(false || !!document.documentMode)
         }
     }
 
-    let generateLinkContent = function(covidProject){
+    let generateCovidResearchContent = function(covidProject){
         let linkContent = '';
         for(let i = 0; i < covidProject.length; i++)
         {
@@ -139,4 +139,18 @@ if(false || !!document.documentMode)
         + linkContent: '';
         
         return linkContent + '</ul>';
+    }
+
+    let generateLogoContent = function(faculty){
+        let onlineCVcontent = (faculty.onlineCV == '')?'':
+        '<a href = "'+ faculty.onlineCV +'"><img src = "assets/images/cv.png"></a>'; 
+        let researchGatecontent = (faculty.researchGateProfile == '')?'':
+        '<a href = "'+ faculty.researchGateProfile +'"><img src = "assets/images/research-gate-logo.png"></a>'; 
+        let googleScholarcontent = (faculty.googleScholarProfile == '')?'':
+        '<a href = "'+ faculty.googleScholarProfile +'"><img src = "assets/images/google-scholar-logo.png"></a>'; 
+        let othercontent = (faculty.otherProfile == '')?'':
+        '<a href = "'+ faculty.otherProfile +'"><img src = "assets/images/link.png"></a>'; 
+        let linkContainer = '<div class = "display-flex icon-container">'+
+        onlineCVcontent + researchGatecontent + googleScholarcontent + othercontent + '</div>';
+        return linkContainer;
     }

@@ -18,6 +18,11 @@ Primary use:    faculty-and-researchers.css file used for styling faculty
     clear: both;
 }
 
+.icon-container  img{
+    width: 30px;
+    margin: 5px 10px 10px 0px;
+}
+
 @media screen and (max-width: 1192px)
 {
     .faculty-info{
