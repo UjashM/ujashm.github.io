@@ -43,6 +43,7 @@ if(false || !!document.documentMode)
 
         else
         {   
+            let idCounter = 1;
             let content = '';
             //School-counter for unique id generation
             let schoolcounter = 1;
@@ -101,8 +102,9 @@ if(false || !!document.documentMode)
                         '>'+ faculty.email+ '</a><br><strong>Phone: </strong>'+ faculty.contact + '<br><strong>Research Interests: </strong>'+ faculty.researchInterest + '</p><p>' + 
                         faculty.researchDescription +'</p>'+ generateCovidResearchContent(faculty.covidProjects) +'</div>'; 
                     });
-
-                    accordioncontent += '<div class = "accordion-container"><div class = "accordion-header"><h3 class = "content-header-no-margin">'+ department + '</h3></div><div class = "accordion-content">'+ departmentFacultyContent +'</div></div>';
+                    accordionheaderId = "header" + idCounter;
+                    accordioncontent += '<div class = "accordion-container"><a id = "'+ accordionheaderId +'" href = "#'+ accordionheaderId + '"><div class = "accordion-header"><h3 class = "content-header-no-margin">'+ department + '</h3></div></a><div class = "accordion-content">'+ departmentFacultyContent +'</div></div>';
+                    idCounter++;
                 });
 
                 //generating Id for bootstrap accordion

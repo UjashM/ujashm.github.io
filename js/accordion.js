@@ -6,20 +6,20 @@ mainContent.addEventListener('click', function(e){
             let currentaccordion = e.target.parentElement;
             let accordions = document.getElementsByClassName('accordion-header');
             
-            if(currentaccordion.nextElementSibling.style.display != "block")
+            if(currentaccordion.parentElement.nextElementSibling.style.display != "block")
 	        {
                 //if content is invisible, set other open content's display to none
                 for (let i = 0; i < accordions.length; i++) {
-                accordions[i].nextElementSibling.style.display = "none";      
+                accordions[i].parentElement.nextElementSibling.style.display = "none";      
             }
         //setting current content display to block to show content
-                currentaccordion.nextElementSibling.style.display = "block";
+                currentaccordion.parentElement.nextElementSibling.style.display = "block";
             }
     
 	//If content is not hidden, changing the display property to none to hide content
-        else if(currentaccordion.nextElementSibling.style.display == "block")
+        else if(currentaccordion.parentElement.nextElementSibling.style.display == "block")
 	    {
-            currentaccordion.nextElementSibling.style.display = "none";
+            currentaccordion.parentElement.nextElementSibling.style.display = "none";
         }
     }
  })
